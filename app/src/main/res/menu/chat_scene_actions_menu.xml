@@ -1,0 +1,17 @@
+<!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sweeper_robot"
+        android:title="扫地机器人"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/navigate"
+        android:title="车载导航"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,90 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp">
+
+    <com.baidu.aip.chatkit.utils.ShapeImageView
+        android:id="@id/messageUserAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@mipmap/server_logo" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/message_incoming_bubble_margin_right"
+        android:layout_marginRight="@dimen/message_incoming_bubble_margin_right"
+        android:paddingTop="6dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="6dp"
+        android:layout_toEndOf="@id/messageUserAvatar"
+        android:layout_toRightOf="@id/messageUserAvatar"
+        android:orientation="vertical"
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_end">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:paddingTop="6dp"
+                      android:paddingLeft="15dp"
+                      android:paddingRight="6dp"
+                      android:paddingBottom="6dp"
+                      android:orientation="vertical">
+            <TextView
+                    android:id="@id/messageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            <TextView
+                    android:id="@+id/hint1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/hint_enable_selector"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"/>
+            <TextView
+                    android:id="@+id/hint2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/hint_enable_selector"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"/>
+            <TextView
+                    android:id="@+id/hint0_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/hint_enable_selector"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageText"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:paddingTop="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="6dp"
+            android:visibility="gone"
+            app:layout_alignSelf="center"/>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</RelativeLayout>

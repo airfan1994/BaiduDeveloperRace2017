@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <!--<Button-->
+    <!--android:id="@+id/btn2"-->
+    <!--style="@style/Widget.AppCompat.Button.Colored"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="@color/colorAccent"-->
+    <!--android:text="BACK"-->
+    <!--android:textAlignment="center" />-->
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/title_rl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@color/title_bg_color"-->
+        <!--android:layout_height="48dp">-->
+        <!--<TextView-->
+            <!--android:id="@+id/title_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="20dp"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:layout_centerInParent="true"/>-->
+        <!--<ImageView-->
+            <!--android:layout_width="10dp"-->
+            <!--android:layout_height="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@id/title_tv"-->
+            <!--android:src="@drawable/chat_triangle"/>-->
+        <!--<ImageButton-->
+            <!--android:id="@+id/goToAR"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentTop="true"-->
+
+            <!--android:background="@android:drawable/ic_menu_view" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<com.baidu.aip.chatkit.message.MessagesList-->
+        <!--android:id="@+id/messagesList"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/title_rl"-->
+        <!--app:outcomingAvatar="@drawable/user"-->
+        <!--app:incomingAvatar="@drawable/bot"-->
+        <!--app:incomingBubbleDrawable="@drawable/chat_incoming_bg"-->
+        <!--app:outcomingBubbleDrawable="@drawable/chat_outcoming_bg"-->
+        <!--android:layout_above="@+id/input"/>-->
+    <RelativeLayout
+        android:id="@+id/UnityView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/goBack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+
+        android:background="@android:drawable/ic_menu_revert" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/input2"
+        android:background="#e8e8e8"/>
+
+    <com.baidu.aip.chatkit.message.MessageInput
+        android:id="@+id/input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/input_bg_color"
+        app:inputBackground="@drawable/chat_text_input_bg"
+        app:voiceInputBackground="@drawable/chat_speaker"
+        app:inputHint="Type a message…"/>
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/imageButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--app:srcCompat="@drawable/app_icon"-->
+    <!--android:layout_above="@+id/messagesList" />-->
+
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/voice_input"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--tools:targetApi = "23">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn2"-->
+    <!--style="@style/Widget.AppCompat.Button.Small"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:elevation="0dp"-->
+    <!--android:gravity="right"-->
+    <!--android:text="Go Back"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textSize="30sp" />-->
+
+    <RelativeLayout
+        android:id="@+id/UnityView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+    </RelativeLayout>
+    <!--<Button-->
+        <!--android:id="@+id/btn2"-->
+        <!--style="@style/Widget.AppCompat.Button.Colored"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:text="BACK"-->
+        <!--android:textAlignment="center" />-->
+    <!--<ImageButton-->
+        <!--android:id="@+id/goBack"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+
+        <!--android:background="@android:drawable/ic_menu_revert" />-->
+
+
+    <ImageButton
+        android:id="@+id/voiceInput"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@android:drawable/presence_invisible"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/bd_asr_mic" />
+    <!--<Button-->
+    <!--android:id="@+id/BtnNext"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:text="next" />-->
+</RelativeLayout>

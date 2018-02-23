@@ -1,0 +1,61 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp">
+
+    <com.baidu.aip.chatkit.utils.ShapeImageView
+        android:id="@id/messageUserAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@mipmap/user_logo"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/messageUserAvatar"
+        android:layout_marginLeft="@dimen/message_outcoming_bubble_margin_left"
+        android:layout_marginStart="@dimen/message_outcoming_bubble_margin_left"
+
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_end">
+
+        <TextView
+            android:id="@id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="6dp"
+            android:layout_alignWithParentIfMissing="true"/>
+
+        <TextView
+            android:id="@id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageText"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:paddingTop="6dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="6dp"
+            android:visibility="gone"
+            app:layout_alignSelf="center"
+            app:layout_order="1"/>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</RelativeLayout>

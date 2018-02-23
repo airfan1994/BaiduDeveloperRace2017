@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.baidu.aip.unit">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"   />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--新增部分-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25" />-->
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25" />
+    <uses-feature android:glEsVersion="0x00020000" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+
+    <!-- android:icon="@mipmap/ic_launcher"-->
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/server_logo"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/server_logo"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <!-- begin: baidu speech sdk-->
+        <!-- 请填写应用实际的APP_ID default:19950098-->
+        <meta-data android:name="com.baidu.speech.APP_ID" android:value="10220691"/>
+        <!-- 请填写应用实际的API_KEY default:oFF4f0AIikUfoXToldBkd4lj-->
+        <meta-data android:name="com.baidu.speech.API_KEY" android:value="T04MjgBs6Yx98AFRe2PHHnbZ"/>
+        <!-- 请填写应用实际的SECRET_KEY default:D0Z8Y9R9KQERpgg9rx8ojmClwRPlvs7a-->
+        <meta-data android:name="com.baidu.speech.SECRET_KEY" android:value="Kjl3nqYfnUFTmI4UueIEtWHvSfsL8iSd"/>
+
+        <meta-data android:name="unity.build-id" android:value="bf632406-6f3d-46c8-b8d6-194ebcf62178" />
+        <meta-data android:name="unity.splash-mode" android:value="0" />
+        <meta-data android:name="unity.splash-enable" android:value="True" />
+
+        <service android:name="com.baidu.speech.VoiceRecognitionService" android:exported="false" ></service>
+        <activity
+            android:name="com.baidu.voicerecognition.android.ui.BaiduASRDigitalDialog"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="false"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.baidu.action.RECOGNIZE_SPEECH" ></action>
+                <category android:name="android.intent.category.DEFAULT" ></category>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.gpsn.HelloAR.UnityPlayerActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:label="second" android:process="e.unitry3d"
+            >
+        </activity>
+
+        <activity android:name="com.gpsn.HelloAR.UnityPlayerActivity2" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:label="second" android:process="e.unitry3d"
+            >
+        </activity>
+        <activity android:name="com.gpsn.HelloAR.MainActivity2" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:label="second" android:process="e.unitry3d"
+            >
+        </activity>
+    </application>
+
+</manifest>

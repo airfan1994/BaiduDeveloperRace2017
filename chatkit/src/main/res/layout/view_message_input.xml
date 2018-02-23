@@ -1,0 +1,82 @@
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/swithAndAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+        <ImageButton
+                android:id="@id/swithButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"/>
+
+        <android.support.v4.widget.Space
+                android:id="@id/swithButtonSpace"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_toEndOf="@id/swithButton"
+                android:layout_toRightOf="@id/swithButton"/>
+
+        <ImageButton
+                android:id="@id/attachmentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+
+        <android.support.v4.widget.Space
+                android:id="@id/attachmentButtonSpace"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_toEndOf="@id/attachmentButton"
+                android:layout_toRightOf="@id/attachmentButton"/>
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+            android:id="@id/sendButtonSpace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_toLeftOf="@id/messageSendButton"
+            android:layout_toStartOf="@id/messageSendButton"/>
+
+    <ImageButton
+        android:id="@id/messageSendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    <RelativeLayout
+        android:id="@+id/input_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/swithAndAttachment"
+        android:layout_toRightOf="@id/swithAndAttachment">
+
+        <EditText
+            android:id="@id/messageInput"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:imeOptions="actionSend"
+            android:paddingRight="42dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/audioInput"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+</merge>

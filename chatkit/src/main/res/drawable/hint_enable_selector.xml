@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:state_enabled="true" android:color="@color/hint_text_enable"></item>
+    <item android:state_enabled="false" android:color="@color/hint_text_unenable"></item>
+
+</selector>
